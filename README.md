@@ -1,4 +1,3 @@
-# deployment-config
 
 ## Require 
 
@@ -8,6 +7,7 @@
 4. Nginx 
 
 [How to install Nginx](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04)
+
 [How to install Docker](https://docs.docker.com/desktop/install/windows-install/)
 
 ## How to add reverse proxy 
@@ -39,5 +39,3 @@ You can use this comment to add certbot for secure communication
 ```bash
 sudo certbot --nginx -d example.com
 ```
-
-THANK YOU
