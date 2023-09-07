@@ -1,6 +1,6 @@
 version: '3'
 services:
-  surveybox-db:
+  keycloak-db:
     image: postgres:15
     restart: always
     container_name: keycloakv2_db
