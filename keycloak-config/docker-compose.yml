@@ -1,0 +1,26 @@
+version: '3'
+services:
+  keycloak_demo:
+    build:=
+      context: .
+      args:
+        KEYCLOAK_VERSION: 22.0.0
+    command: ['start', '--optimized']
+    # restart: always
+    environment:
+      #JAVA_OPTS_APPEND: -Dkeycloak.profile.feature.upload_scripts=enabled
+      KC_DB_PASSWORD: root@123
+      KC_DB_URL: jdbc:postgresql://159.223.78.92:5432/keycloak_db
+      KC_DB_USERNAME: postgres
+      KC_HEALTH_ENABLED: 'true'
+      KC_HTTP_ENABLED: 'true'
+      KC_METRICS_ENABLED: 'true'
+      # KC_HOSTNAME: keycloak.com.au
+      # KC_HOSTNAME_PORT: 8180
+      KC_HOSTNAME_URL: https://keycloakv2.sreypheasin.co
+      KC_PROXY: reencrypt
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin123
+    ports:
+      - "8081:8080"
+      - "8786:8787" # debug port
